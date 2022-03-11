@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./components/Button";
+import Product from "./components/product/Product";
 // There are two ways of creating component
 // 1 ES6 class based component
 // 2 function component is a normal javascript functions which return the jsx
@@ -18,8 +19,23 @@ export default class App extends React.Component {
       <div>
         <h2>App Js Works With Class Component</h2>
 
-        <Button name="Play store" />
-        <Button name="App Store" />
+        {/* <Button name="Play store" />
+        <Button name="App Store" /> */}
+        <Product
+          title="Apple 13 pro"
+          desc="Apple 13 pro is build with M13 ionic chip"
+          price={100000}
+        />
+        <Product
+          title="Samsung S13"
+          desc="Samsung S13 has high quality display screen"
+          price={80000}
+        />
+        <Product
+          title="Redmi 5 pro"
+          desc="Redmin 5 pro was built with snapdragon 430"
+          price={20000}
+        />
       </div>
     );
   }
