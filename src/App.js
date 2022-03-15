@@ -3,6 +3,8 @@ import Button from "./components/Button";
 import Product from "./components/product/Product";
 import "./App.css";
 import ContactUs from "./components/contact-us/ContactUs";
+import UserGreetings from "./components/user-greetings/UserGreetings";
+import Header from "./components/header/Header";
 // There are two ways of creating component
 // 1 ES6 class based component
 // 2 function component is a normal javascript functions which return the jsx
@@ -19,7 +21,10 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <h2>App Js Works With Class Component</h2>
+        {/* header goes here */}
+        <Header />
+        {/* <h2>App Js Works With Class Component</h2> */}
+        {/* <UserGreetings isLoggedIn={false} /> */}
 
         {/* <Button name="Play store" />
         <Button name="App Store" /> */}
@@ -40,7 +45,7 @@ export default class App extends React.Component {
           price={20000}
         /> */}
 
-        <ContactUs />
+        {/* <ContactUs /> */}
       </div>
     );
   }
