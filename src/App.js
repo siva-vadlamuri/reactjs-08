@@ -45,7 +45,7 @@ export default class App extends React.Component {
           price={20000}
         /> */}
 
-        {/* <ContactUs /> */}
+        <ContactUs />
       </div>
     );
   }
