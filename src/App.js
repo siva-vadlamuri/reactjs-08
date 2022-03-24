@@ -6,6 +6,7 @@ import ContactUs from "./components/contact-us/ContactUs";
 import UserGreetings from "./components/user-greetings/UserGreetings";
 import Header from "./components/header/Header";
 import Users from "./components/users/Users";
+import Pagination from "./components/users/pagination/Pagination";
 // There are two ways of creating component
 // 1 ES6 class based component
 // 2 function component is a normal javascript functions which return the jsx
@@ -47,7 +48,8 @@ export default class App extends React.Component {
         /> */}
 
         {/* <ContactUs /> */}
-        <Users />
+        {/* <Users /> */}
+        <Pagination />
       </div>
     );
   }
