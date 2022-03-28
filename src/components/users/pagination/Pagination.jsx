@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import loader from "../../../assets/loader.gif";
 
 export default class Pagination extends Component {
   state = {
@@ -25,7 +26,7 @@ export default class Pagination extends Component {
   }
 
   handleButtonClick = (num) => {
-    this.setState({ pageNumber: num });
+    this.setState({ pageNumber: num, usersData: [] });
   };
   //   componentDidUpdate will called every time when the state is updated
   //   updated
@@ -71,7 +72,7 @@ export default class Pagination extends Component {
             </div>
           </div>
         ) : (
-          <p>Loading</p>
+          <img src={loader} alt="loader" />
         )}
         {/* All the pagination buttons */}
         <div className="container mt-3">
