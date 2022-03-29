@@ -50,9 +50,8 @@ export default class App extends React.Component {
 
         {/* <ContactUs /> */}
         {/* <Users /> */}
-        {/* <Pagination />
-         */}
-        <Counter />
+        <Pagination />
+        {/* <Counter /> */}
       </div>
     );
   }
