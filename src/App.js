@@ -8,6 +8,7 @@ import Header from "./components/header/Header";
 import Users from "./components/users/Users";
 import Pagination from "./components/users/pagination/Pagination";
 import Counter from "./components/counter/Counter";
+import { Route, Routes } from "react-router-dom";
 // There are two ways of creating component
 // 1 ES6 class based component
 // 2 function component is a normal javascript functions which return the jsx
@@ -26,6 +27,14 @@ export default class App extends React.Component {
       <div>
         {/* header goes here */}
         <Header />
+        {/* main */}
+        <Routes>
+          <Route path="/" element={<h2>Home Page is working</h2>} />
+          <Route path="/Home" element={<h2>Home Page is working</h2>} />
+          <Route path="/Users" element={<Pagination />} />
+          <Route path="/ContactUs" element={<ContactUs />} />
+        </Routes>
+        {/* footer */}
         {/* <h2>App Js Works With Class Component</h2> */}
         {/* <UserGreetings isLoggedIn={false} /> */}
 
@@ -50,7 +59,7 @@ export default class App extends React.Component {
 
         {/* <ContactUs /> */}
         {/* <Users /> */}
-        <Pagination />
+
         {/* <Counter /> */}
       </div>
     );

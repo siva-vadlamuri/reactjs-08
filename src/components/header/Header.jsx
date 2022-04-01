@@ -1,15 +1,16 @@
+import { Link } from "react-router-dom";
 import Navigation from "./navigation/Navigation";
 
 const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           <img
             src="https://www.achieversit.com/assets/images/logo-white.png"
             alt=""
           />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
