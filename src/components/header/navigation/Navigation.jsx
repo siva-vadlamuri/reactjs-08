@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
-  const links = ["Home", "Users", "ContactUs", "AboutUs"];
+  const links = ["Home", "Users", "Products", "Cart"];
   return (
     <ul className="navbar-nav">
       {links.map((link, idX) => (

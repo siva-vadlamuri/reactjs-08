@@ -1,14 +1,9 @@
-import React from "react";
-import Button from "./components/Button";
-import Product from "./components/product/Product";
+import React, { createContext, useState } from "react";
 import "./App.css";
-import ContactUs from "./components/contact-us/ContactUs";
-import UserGreetings from "./components/user-greetings/UserGreetings";
 import Header from "./components/header/Header";
-import Users from "./components/users/Users";
-import Pagination from "./components/users/pagination/Pagination";
-import Counter from "./components/counter/Counter";
-import { Route, Routes } from "react-router-dom";
+import Parent from "./components/hooks/context/Parent";
+import ReducerHook from "./components/hooks/reducer/ReducerHook";
+import Router from "./components/router/Router";
 // There are two ways of creating component
 // 1 ES6 class based component
 // 2 function component is a normal javascript functions which return the jsx
@@ -21,26 +16,39 @@ import { Route, Routes } from "react-router-dom";
 //   );
 // }
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <div>
-        {/* header goes here */}
-        <Header />
-        {/* main */}
-        <Routes>
-          <Route path="/" element={<h2>Home Page is working</h2>} />
-          <Route path="/Home" element={<h2>Home Page is working</h2>} />
-          <Route path="/Users" element={<Pagination />} />
-          <Route path="/ContactUs" element={<ContactUs />} />
-        </Routes>
-        {/* footer */}
-        {/* <h2>App Js Works With Class Component</h2> */}
-        {/* <UserGreetings isLoggedIn={false} /> */}
+// context API
+// Creating the contex
+// Provider
+// cusomer
 
-        {/* <Button name="Play store" />
+// named export
+export const ThemeContext = createContext();
+// theme, (light theme and dark theme)
+function App() {
+  const [theme, setTheme] = useState("light");
+
+  return (
+    <div>
+      {/* header goes here */}
+      <Header />
+      {/* <ReducerHook /> */}
+      {/* <p>Theme:{theme}</p>
+      <ThemeContext.Provider value={{ theme, setTheme }}>
+        <Parent />
+      </ThemeContext.Provider> */}
+      {/* main */}
+      {/* routes are two type
+        static routes /about /home /blog
+        dynamic routes */}
+      <Router />
+
+      {/* footer */}
+      {/* <h2>App Js Works With Class Component</h2> */}
+      {/* <UserGreetings isLoggedIn={false} /> */}
+
+      {/* <Button name="Play store" />
         <Button name="App Store" /> */}
-        {/* <p className="App__error">An Error Occured On [App.js]</p>
+      {/* <p className="App__error">An Error Occured On [App.js]</p>
         <Product
           title="Apple 13 pro"
           desc="Apple 13 pro is build with M13 ionic chip"
@@ -57,13 +65,12 @@ export default class App extends React.Component {
           price={20000}
         /> */}
 
-        {/* <ContactUs /> */}
-        {/* <Users /> */}
+      {/* <ContactUs /> */}
+      {/* <Users /> */}
 
-        {/* <Counter /> */}
-      </div>
-    );
-  }
+      {/* <Counter /> */}
+    </div>
+  );
 }
 
-// export default App;
+export default App;
