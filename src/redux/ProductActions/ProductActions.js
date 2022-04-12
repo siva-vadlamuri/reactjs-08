@@ -2,21 +2,22 @@
 
 import { ACTION_TYPES } from "../ActionTypes/ActionTypes";
 
-const setProducts = (products) => {
+export const setProducts = (products) => {
   return {
     type: ACTION_TYPES.SET_PRODUCTS,
     payload: products,
   };
 };
 
-const addToCart = (product) => {
+export const addToCart = (product) => {
+  console.log(product);
   return {
     type: ACTION_TYPES.ADD_TO_CART,
     payload: product,
   };
 };
 
-const removeFromCart = (id) => {
+export const removeFromCart = (id) => {
   return {
     type: ACTION_TYPES.REMOVE_FROM_CART,
     payload: id,
